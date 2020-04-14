@@ -9,6 +9,7 @@
                 <a class="navbar-brand" href="#offer">👌 What we offer</a>
                 <a class="navbar-brand" href="#price">💰 Prices</a>
                 <a class="navbar-brand" href="#aboutus">❤️ About us</a>
+                <a class="navbar-brand" href="{{route('logout')}}">Logout</a>
             </nav>
         </div>
     </div>

@@ -23,3 +23,5 @@ Auth::routes(['verify' => true]);
 
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/home', 'HomeController@index')->middleware('verified');
+Route::get('/student-rooms', 'roomsController@showRooms');
+Route::resource('rooms', 'roomsController');

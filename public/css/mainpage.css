@@ -1,7 +1,6 @@
 .blog-content{  width: 250;
                 height: 230px;
                 object-fit: cover;
-               
                 }
 .top-right{position: absolute;
 top: 8px;
@@ -35,3 +34,4 @@ text-shadow: 1.5px 1.5px  black;
     color: white;
   }
 
+button:focus {outline:0;}

@@ -23,8 +23,12 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {        
-        $data = DB::select('select * from owners');
+    {   
+        $someData = [
+            'John','Doe'
+        ];   
+        $data = DB::select('select * from rooms');
+        
         return view('mainpage')->with('owner',$data);
     }
 }

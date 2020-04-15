@@ -10,32 +10,38 @@
         <div class="col-11"></div>
     </div>
 </div>
-
+<div></div>
 <div class="container">
-    @foreach($owner as $data)
-        <button class="col-md-3" style="border:none;background-color:white"  onclick="showModal('{{$data->adress}}','{{$data->id}}','{{$data->price}}','{{$data->image}}')" data-toggle="modal" data-target="#exampleModalScrollable">
-            <figure class="imghvr-slide-right" >
-                <div class="top-right">Top right</div>
-                <div class="centered">{{$data->id}}</div>
-                <img class="img-responsive blog-content" src="storage/{{$data->image}}" >
-                 <figcaption >
-                        <div class="row">
-                                <div class="col-sm-5 ">
-                                    <span>🏙️ Citycenter </span>
+    <div class="row">
+        @foreach($roomData as $data)
+            <div class="col-3">
+                <button style="border:none;background-color:white"  onclick="showModal('{{$data->adress}}','{{$data->id}}','{{$data->price}}','{{$data->image}}')" data-toggle="modal" data-target="#exampleModalScrollable">
+                    <figure class="imghvr-slide-right" >
+                        <div class="top-right">Top right</div>
+                        <div class="centered">{{$data->id}}</div>
+                        <img class="img-responsive blog-content" src="storage/{{$data->image}}" >
+                        <figcaption >
+                                <div class="row">
+                                        <div class="col-sm-5 ">
+                                            <span>🏙️ Citycenter </span>
+                                        </div>
+                                        <div class="col-sm-7">
+                                         
+                                            <div class="bar-container">
+                                        
+                                            </div>
+                                        </div>
                                 </div>
-                                <div class="col-sm-7">
-
-                                    <div class="bar-container">
-                                   
-                                    </div>
-                                </div>
-                        
-                        </div>
-                 </figcaption>
-             </figure>
-        </button>
-    @endforeach
+                        </figcaption>
+                    </figure>
+                </button>
+            </div>
+        @endforeach
+    </div>
 </div>
+<div id="example" data="{{$someData}}">
+</div>
+<script src="js/app.js"></script>
 
 @include('modal-living')
 

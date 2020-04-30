@@ -8,10 +8,23 @@
         <div  class="col-1"></div>
         <button class="col-1 btn-danger">Add Filter </button>
         
-        @foreach($data as $live)
-            {{$live->title}}
+        @foreach($data as $room)
+        <button class="col-md-3 mt-1 m-0" style="border:none;background-color:white" data-toggle="modal" data-target="#exampleModalScrollable">
+            <figure class="imghvr-slide-right" >
+                <div class="top-right">Top right</div>
+                <div class="centered">{{ $room->adress }}</div>
+                <img class="img-responsive blog-content" src="img/{{$room->image}}" >
+                 <figcaption >
+                        <div class="row">
+             
+        
+                        </div>
+                 </figcaption>
+            
+             </figure>
+            </button>
         @endforeach
-
+     
 
         <div class="col-11"></div>
     </div>

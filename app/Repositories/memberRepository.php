@@ -2,16 +2,16 @@
 
 namespace App\Repositories;
 
-use App\Models\rooms;
+use App\Models\member;
 use App\Repositories\BaseRepository;
 
 /**
- * Class roomsRepository
+ * Class memberRepository
  * @package App\Repositories
- * @version April 30, 2020, 3:02 pm UTC
+ * @version April 30, 2020, 3:01 pm UTC
 */
 
-class roomsRepository extends BaseRepository
+class memberRepository extends BaseRepository
 {
     /**
      * @var array
@@ -38,6 +38,6 @@ class roomsRepository extends BaseRepository
      **/
     public function model()
     {
-        return rooms::class;
+        return member::class;
     }
 }

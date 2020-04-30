@@ -1,6 +1,8 @@
-@extends('layouts.app')
+@include('layouts.navbar')
+@include('layouts.breadstyle')
 
-@section('content')
+
+<div class="container">
     <section class="content-header">
         <h1>
             Rooms
@@ -20,4 +22,4 @@
            </div>
        </div>
    </div>
-@endsection
+</div>

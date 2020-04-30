@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model as Model;
 /**
  * Class rooms
  * @package App\Models
- * @version April 14, 2020, 10:03 am UTC
+ * @version April 30, 2020, 3:02 pm UTC
  *
  * @property \App\Models\Owner ownerid
  * @property \Illuminate\Database\Eloquent\Collection bookings

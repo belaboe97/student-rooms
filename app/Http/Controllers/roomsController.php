@@ -22,14 +22,6 @@ class roomsController extends AppBaseController
         $this->roomsRepository = $roomsRepo;
     }
 
-    public function api()
-    {
-        $result=room::all();
-        return $result;
-    }
-
-
-
     /**
      * Display a listing of the rooms.
      *
@@ -42,7 +34,7 @@ class roomsController extends AppBaseController
 
         $data = DB::select('select * from rooms');
 
-        return view ('mainpage')->with('data',$data);
+        return view ('mainpage')->with('rooms', $data);
     }
 
     

@@ -27,6 +27,6 @@ class HomeController extends Controller
          
         $data = DB::select('select * from rooms');
         
-        return view('mainpage')->with('owner',$data);
+        return view('index')->with('data',$data);
     }
 }

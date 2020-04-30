@@ -17,9 +17,7 @@ class owner extends Controller
     public function ownerview(){
 
         $roomData = DB::select('select * from rooms');
-        $someData =   ['john','doe'];
-
-        return view ('mainpage')->with('roomData',$roomData)
-                                ->with('someData',json_encode($someData));
+        return view ('mainpage')
+                                ->withData(json_encode($someData));
     }
 }

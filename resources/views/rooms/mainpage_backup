@@ -39,8 +39,10 @@
         @endforeach
     </div>
 </div>
-<div id="root" data="{{$roomData}}">
+<div id="example" data="{{$roomData}}">
 </div>
 <script src="js/app.js"></script>
 
 @include('modal-living')
+
+

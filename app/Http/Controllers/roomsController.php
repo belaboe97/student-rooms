@@ -7,8 +7,10 @@ use App\Http\Requests\UpdateroomsRequest;
 use App\Repositories\roomsRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\room;
 use Flash;
 use Response;
+use DB; 
 
 class roomsController extends AppBaseController
 {
@@ -20,6 +22,11 @@ class roomsController extends AppBaseController
         $this->roomsRepository = $roomsRepo;
     }
 
+    public function api()
+    {
+        $result=room::all();
+        return $result;
+    }
 
 
 
@@ -35,7 +42,7 @@ class roomsController extends AppBaseController
 
         $data = DB::select('select * from rooms');
 
-        return view ('mainpage')->with('owner',$data);
+        return view ('mainpage')->with('data',$data);
     }
 
     

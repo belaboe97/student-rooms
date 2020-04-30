@@ -28,7 +28,7 @@ body, html {
 .login-box{
     background-color: rgb(243, 243, 243);
     width: 400px; 
-    height: 280px;
+    height: 320px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -58,3 +58,16 @@ body, html {
     padding: 10px; 
     text-align: center; 
 } 
+
+.register-box{
+    background-color: rgb(243, 243, 243);
+    width: 400px; 
+    height: 380px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 1px rgb(56, 56, 56);
+    padding:1rem;  
+    border-radius:3px
+  }

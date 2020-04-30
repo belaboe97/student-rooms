@@ -24,9 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        $someData = [
-            'John','Doe'
-        ];   
+         
         $data = DB::select('select * from rooms');
         
         return view('mainpage')->with('owner',$data);

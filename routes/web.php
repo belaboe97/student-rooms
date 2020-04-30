@@ -24,3 +24,6 @@ Route::get('home', 'roomsController@showRooms')->middleware('verified');
 
 
 Route::resource('rooms', 'roomsController')->middleware('verified');
+
+
+Route::resource('owners', 'ownersController');

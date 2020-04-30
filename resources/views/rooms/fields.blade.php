@@ -11,9 +11,9 @@
 </div>
 
 <!-- Ownerid Field -->
+
 <div class="form-group col-sm-6">
-    {!! Form::label('ownerid', 'Ownerid:') !!}
-    {!! Form::number('ownerid', null, ['class' => 'form-control']) !!}
+    <input type="hidden" id="ownerid" name="ownerid" value="{{$user->id}}" readonly>
 </div>
 
 <!-- Image Field -->

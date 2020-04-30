@@ -52,8 +52,10 @@ class roomsController extends AppBaseController
      * @return Response
      */
     public function create()
-    {
-        return view('rooms.create');
+    {   
+        $user = auth()->user();
+        return view('rooms.create')
+            ->with('user', $user); 
     }
 
     /**

@@ -101,6 +101,10 @@
     },
     {
         "type": "relation",
+        "relation": "1tm,Roomrating,roomid"
+    },
+    {
+        "type": "relation",
         "relation": "1tm,Booking,idroom"
     }
 ]

@@ -14,6 +14,7 @@
 <div class="container">
     <div class="row">
         @foreach($rooms as $data)
+       
             <div class="col-3">
                 <button style="border:none;background-color:white"  onclick="showModal('{{$data->adress}}','{{$data->id}}','{{$data->price}}','{{$data->image}}')" data-toggle="modal" data-target="#exampleModalScrollable">
                     <figure class="imghvr-slide-right" >
@@ -28,7 +29,7 @@
                                         <div class="col-sm-7">
                                          
                                             <div class="bar-container">
-                                        
+                                               
                                             </div>
                                         </div>
                                 </div>
@@ -42,6 +43,16 @@
 
 </div>
 
+<!-- Footer -->
+<footer class="page-footer font-small blue">
 
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Fo
 @include('modal-living')
 

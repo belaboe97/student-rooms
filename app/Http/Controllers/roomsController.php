@@ -7,10 +7,9 @@ use App\Http\Requests\UpdateroomsRequest;
 use App\Repositories\roomsRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-use App\room;
 use Flash;
 use Response;
-use DB; 
+use DB;
 
 class roomsController extends AppBaseController
 {
@@ -22,6 +21,14 @@ class roomsController extends AppBaseController
         $this->roomsRepository = $roomsRepo;
     }
 
+
+    public function showRooms(Request $request)
+    {
+
+        $data = DB::select('select * from rooms, owners where owners.id = rooms.id');
+
+        return view ('mainpage')->with('rooms', $data);
+    }
     /**
      * Display a listing of the rooms.
      *
@@ -29,15 +36,6 @@ class roomsController extends AppBaseController
      *
      * @return Response
      */
-    public function showRooms(Request $request)
-    {
-
-        $data = DB::select('select * from rooms');
-
-        return view ('mainpage')->with('rooms', $data);
-    }
-
-    
     public function index(Request $request)
     {
         $rooms = $this->roomsRepository->all();
@@ -46,14 +44,10 @@ class roomsController extends AppBaseController
             ->with('rooms', $rooms);
     }
 
-    /**
-     * Show the form for creating a new rooms.
-     *
-     * @return Response
-     */
     public function create()
     {   
         $user = auth()->user();
+        
         return view('rooms.create')
             ->with('user', $user); 
     }

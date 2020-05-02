@@ -21,9 +21,15 @@ Auth::routes(['verify' => true]);
 
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('home', 'roomsController@showRooms')->middleware('verified');
+Route::get('/roomratings/rateroom/{room}','roomratingController@rateroom')->name('roomratings.rateroom');
+Route::get('/roomratings/room/{court}','roomratingController@showroomratings')->name('roomratings.showroomratings');
 
 
 Route::resource('rooms', 'roomsController')->middleware('verified');
 
 
 Route::resource('owners', 'ownersController');
+
+Route::resource('users', 'usersController');
+
+Route::resource('roomratings', 'roomratingController');

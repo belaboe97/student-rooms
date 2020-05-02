@@ -6,7 +6,6 @@
     <div class="row justify-content-center">
         <div class="shadow p-3 mb-5 bg-white rounded col-10 text-center ml-5">Please not that all of the here listed providers are tested and commercial companys</div>
         <div  class="col-1"></div>
-        <button class="col-1 btn-danger">Add Filter </button>
         <div class="col-11"></div>
     </div>
 </div>
@@ -19,8 +18,8 @@
                 <button style="border:none;background-color:white"  onclick="showModal('{{$data->adress}}','{{$data->id}}','{{$data->price}}','{{$data->image}}')" data-toggle="modal" data-target="#exampleModalScrollable">
                     <figure class="imghvr-slide-right" >
                         <div class="top-right">Top right</div>
-                        <div class="centered">{{$data->id}}</div>
-                        <img class="img-responsive blog-content" src="storage/{{$data->image}}" >
+                        <div class="centered">{{$data->name}}</div>
+                        <img class="img-responsive blog-content" src="images/{{$data->image}}" >
                         <figcaption >
                                 <div class="row">
                                         <div class="col-sm-5 ">
@@ -42,17 +41,4 @@
 </div>
 
 </div>
-
-<!-- Footer -->
-<footer class="page-footer font-small blue">
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
-  <!-- Fo
-@include('modal-living')
-
+@include('layouts.footer')

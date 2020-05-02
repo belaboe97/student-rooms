@@ -19,6 +19,6 @@
 <!-- Image Field -->
 <div class="form-group">
     {!! Form::label('image', 'Image:') !!}
-    <p>{{ $rooms->image }}</p>
+    {{ $rooms->image }}
 </div>
 

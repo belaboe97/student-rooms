@@ -1,8 +1,3 @@
-<div class="form-group">
-    {!! Form::label('id', 'Id:') !!}
-    <p>{{ $owners->id }}</p>
-</div>
-
 <!-- Adress Field -->
 <div class="form-group">
     {!! Form::label('adress', 'Adress:') !!}
@@ -25,5 +20,11 @@
 <div class="form-group">
     {!! Form::label('email', 'Email:') !!}
     <p>{{ $owners->email }}</p>
+</div>
+
+<!-- Id Field -->
+<div class="form-group">
+    {!! Form::label('id', 'Id:') !!}
+    <p>{{ $owners->id }}</p>
 </div>
 

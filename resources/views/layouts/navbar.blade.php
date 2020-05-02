@@ -17,7 +17,7 @@
                     </div>
                   </div>
                 <a class="navbar-brand" href="#">❤️ About us</a>
-                <a class="navbar-brand" href="{{route('logout')}}">Logout</a>
+                <a class="navbar-brand" href="{{route('logout')}}">🔌 Logout</a>
                 <div class="dropdown">
                     <button class="btn navbar-brand dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         🏠  Rooms

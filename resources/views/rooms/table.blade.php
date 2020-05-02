@@ -17,7 +17,7 @@
                 <td>{{ $rooms->adress }}</td>
             <td>{{ $rooms->price }}</td>
             <td>{{ $rooms->ownerid }}</td>
-            <td><img src="storage/{{ $rooms->image }}" style="width:300px"></td>
+            <td><img src="images/{{ $rooms->image }}" style="width:300px"></td>
             <td style="text-align: center; font-size:1.3rem">{!! round($rooms->roomratings->avg('rating'),2); !!}</td> 
             <td><a href="{{ route('roomratings.showroomratings', [$rooms->id] )}}">
                 <input id="fieldRating" name="rating" value="{!! round($rooms->roomratings->avg('rating'),2); !!}" type="text" class="rating rating-loading" data-min=0 data-max=5 data-step=1 data-size="sm" data-display-only="true"> </a></td>

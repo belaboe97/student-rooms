@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateroomsRequest;
 use App\Repositories\roomsRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\room;
 use Flash;
 use Response;
 use DB;
@@ -25,7 +26,7 @@ class roomsController extends AppBaseController
     public function showRooms(Request $request)
     {
 
-        $data = DB::select('select * from rooms, owners where owners.id = rooms.id');
+        $data = DB::select('select * from rooms, owners where owners.id = rooms.ownerid');
 
         return view ('mainpage')->with('rooms', $data);
     }
@@ -61,11 +62,19 @@ class roomsController extends AppBaseController
      */
     public function store(CreateroomsRequest $request)
     {
-        $input = $request->all();
-
-        $rooms = $this->roomsRepository->create($input);
-
-        Flash::success('Rooms saved successfully.');
+        if($request->hasFile('image')){
+            $room = new room;
+            $room->adress = $request->adress;
+            $room->price = $request->price;
+            $room->ownerid = $request->ownerid;
+            $imageRoom = $request->file('image');
+            $path = public_path(). '/images/';
+            $filename = time() . '.' . $imageRoom->getClientOriginalExtension();
+            $imageRoom->move($path, $filename);
+            $room->image = $filename;
+            $room->save();
+        }
+         
 
         return redirect(route('rooms.index'));
     }
@@ -86,6 +95,7 @@ class roomsController extends AppBaseController
 
             return redirect(route('rooms.index'));
         }
+        $data = DB::select('select * from owners where owners.id = rooms.id');
 
         return view('rooms.show')->with('rooms', $rooms);
     }
@@ -106,8 +116,10 @@ class roomsController extends AppBaseController
 
             return redirect(route('rooms.index'));
         }
-
-        return view('rooms.edit')->with('rooms', $rooms);
+        $user = auth()->user();
+        return view('rooms.edit')
+            ->with('rooms', $rooms)
+            ->with('user',$user);
     }
 
     /**

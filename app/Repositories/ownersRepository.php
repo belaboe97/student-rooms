@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class ownersRepository
  * @package App\Repositories
- * @version April 30, 2020, 5:07 pm UTC
+ * @version May 2, 2020, 2:26 pm UTC
 */
 
 class ownersRepository extends BaseRepository
@@ -20,7 +20,8 @@ class ownersRepository extends BaseRepository
         'adress',
         'name',
         'phone',
-        'email'
+        'email',
+        'id'
     ];
 
     /**

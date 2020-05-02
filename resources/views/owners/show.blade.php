@@ -1,7 +1,6 @@
 @include('layouts.navbar')
 @include('layouts.breadstyle')
 
-
 <div class="container">
     <section class="content-header">
         <h1>

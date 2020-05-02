@@ -7,15 +7,13 @@ use Illuminate\Database\Eloquent\Model as Model;
 /**
  * Class owners
  * @package App\Models
- * @version April 30, 2020, 5:07 pm UTC
+ * @version May 2, 2020, 2:26 pm UTC
  *
- * @property \App\Models\User id
- * @property \App\Models\User user1
- * @property \Illuminate\Database\Eloquent\Collection rooms
  * @property string adress
  * @property string name
  * @property string phone
  * @property string email
+ * @property integer id
  */
 class owners extends Model
 {
@@ -32,7 +30,8 @@ class owners extends Model
         'adress',
         'name',
         'phone',
-        'email'
+        'email',
+        'id'
     ];
 
     /**
@@ -41,11 +40,11 @@ class owners extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
         'adress' => 'string',
         'name' => 'string',
         'phone' => 'string',
-        'email' => 'string'
+        'email' => 'string',
+        'id' => 'integer'
     ];
 
     /**
@@ -54,30 +53,8 @@ class owners extends Model
      * @var array
      */
     public static $rules = [
-        
+        'id' => 'required'
     ];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     **/
-    public function id()
-    {
-        return $this->belongsTo(\App\Models\User::class, 'id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     **/
-    public function user1()
-    {
-        return $this->hasOne(\App\Models\User::class);
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     **/
-    public function rooms()
-    {
-        return $this->hasMany(\App\Models\Room::class, 'ownerid');
-    }
+    
 }

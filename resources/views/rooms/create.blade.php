@@ -13,7 +13,7 @@
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'rooms.store']) !!}
+                    {!! Form::open(['route' => 'rooms.store','files' =>true,'enctype'=>'multipart/form-data']) !!}
 
                         @include('rooms.fields')
 

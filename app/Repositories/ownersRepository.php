@@ -17,7 +17,7 @@ class ownersRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'adress',
+        'owbers_adress',
         'name',
         'phone',
         'email',

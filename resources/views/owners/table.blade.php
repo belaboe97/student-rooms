@@ -13,7 +13,7 @@
         <tbody>
         @foreach($owners as $owners)
             <tr>
-                <td>{{ $owners->adress }}</td>
+                <td>{{ $owners->owners_adress }}</td>
             <td>{{ $owners->name }}</td>
             <td>{{ $owners->phone }}</td>
             <td>{{ $owners->email }}</td>

@@ -9,6 +9,7 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use DB; 
 
 class roomratingController extends AppBaseController
 {
@@ -25,6 +26,8 @@ class roomratingController extends AppBaseController
     {
         return view('roomratings.rateroom')->with('roomid',$roomid);
     }
+
+
     public function showroomratings($roomid)
     {
         $roomratings = $this->roomratingRepository->all()->where('roomid',$roomid);
@@ -34,7 +37,7 @@ class roomratingController extends AppBaseController
 
     public function index(Request $request)
     {
-        $roomratings = $this->roomratingRepository->all();
+        $roomratings = $data = DB::select('select * from rooms, roomrating where roomrating.roomid = rooms.id');
 
         return view('roomratings.index')
             ->with('roomratings', $roomratings);

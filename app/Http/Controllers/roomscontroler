@@ -65,9 +65,6 @@ class roomsController extends AppBaseController
         if($request->hasFile('image')){
             $room = new room;
             $room->adress = $request->adress;
-            $room->description = $request->description;
-            $room->title = $request->title; 
-            $room->roomtype = $request->roomtype;
             $room->price = $request->price;
             $room->ownerid = $request->ownerid;
             $imageRoom = $request->file('image');
@@ -111,7 +108,7 @@ class roomsController extends AppBaseController
      * @return Response
      */
     public function edit($id)
-    {   
+    {
         $rooms = $this->roomsRepository->find($id);
 
         if (empty($rooms)) {

@@ -27,7 +27,7 @@ class owners extends Model
 
 
     public $fillable = [
-        'adress',
+        'owners_adress',
         'name',
         'phone',
         'email',
@@ -40,7 +40,7 @@ class owners extends Model
      * @var array
      */
     protected $casts = [
-        'adress' => 'string',
+        'owners_adress' => 'string',
         'name' => 'string',
         'phone' => 'string',
         'email' => 'string',

@@ -96,8 +96,40 @@
         "inView": true
     },
     {
-        "type": "relation",
-        "relation": "mt1,Owner,ownerid"
+        "name": "description",
+        "dbType": "text:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "roomtype",
+        "dbType": "text:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "title",
+        "dbType": "text:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
     },
     {
         "type": "relation",

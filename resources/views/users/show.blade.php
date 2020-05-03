@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@include('layouts.navbar')
+@include('layouts.breadstyle')
 
-@section('content')
+<div class="container">
     <section class="content-header">
         <h1>
             Users
@@ -16,4 +17,5 @@
             </div>
         </div>
     </div>
-@endsection
+</div> 
+@include('layouts.footer')

@@ -89,3 +89,12 @@ body, html {
     padding:1rem;  
     border-radius:3px
   }
+  .modal-header-bg-img{
+
+    background-image: url("../img/navbar-bg-img.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 150px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}

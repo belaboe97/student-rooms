@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class roomsRepository
  * @package App\Repositories
- * @version May 2, 2020, 11:50 am UTC
+ * @version May 2, 2020, 7:50 pm UTC
 */
 
 class roomsRepository extends BaseRepository
@@ -20,7 +20,10 @@ class roomsRepository extends BaseRepository
         'adress',
         'price',
         'ownerid',
-        'image'
+        'image',
+        'description',
+        'roomtype',
+        'title'
     ];
 
     /**

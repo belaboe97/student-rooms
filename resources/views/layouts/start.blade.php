@@ -40,24 +40,29 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDq4EhyoNE4Hezg5gpukWpHGIkSXv7UUTs&callback=initMap"
     async defer></script>
     <script type="text/javascript">
-        function showModal(adress,id,price,image)
+        function showModal(adress,id,price,owners_adress,phone,email,name,image,roomtype,description,title)
         {
             console.log(adress,id,price,image )
-            $("exampleModalScrollable .modal-title").html(adress)
+            $("exampleModalScrollable .modal-title").html(title)
            $("exampleModalScrollable").modal();
            var titleheader = document.getElementById('exampleModalScrollableTitle')
-           titleheader.innerHTML = adress; 
-           imgstorage = ('storage/'+image) 
-           console.log(imgstorage)
-           document.getElementById('apartment-image').src = ('storage/'+image);
+           titleheader.innerHTML = title;
+           document.getElementById('adress').innerHTML = adress
+           document.getElementById('price').innerHTML = price
+           document.getElementById('roomtype').innerHTML =  roomtype
+           document.getElementById('description').innerHTML =description
+           document.getElementById('name').innerHTML =  name 
+           document.getElementById('phone').innerHTML = phone
+           document.getElementById('email').innerHTML =  email
+        
         }  
             function initMap(){
                 //Map options
                 var options = {
                     zoom:11,
                     center
-                    
-                    :{lat:53.3498,lng: -6.2603}
+
+                    :{lat:52.520008,lng: 13.404954}
                 }
                 // New map
                 var map = new
@@ -65,31 +70,11 @@
         
                 //New Marker
                 var marker = new google.maps.Marker({
-                position: {lat:53.3498,lng: -6.2603},
-                title:"Dublin Center",
+                position: {lat:52.520008,lng:13.404954},
+                title:"Berlin Center",
                 visible: true
                 });
                 marker.setMap(map);
-        
-                var markerITB = new google.maps.Marker({
-                position: {lat:53.404940,lng: -6.379960},
-                title:"TU Dublin Blanchardstown",
-                visible: true,
-                icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-                
-                });
-                markerITB.setMap(map);
-        
-                var markerDCU= new google.maps.Marker({
-                position: {lat:53.384811,lng:-6.263190},
-                title:"DCU Dublin",
-                visible: true,
-                icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-                
-                });
-        
-                markerDCU.setMap(map);
-        
         
         
             }

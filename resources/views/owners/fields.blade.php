@@ -6,7 +6,7 @@
 <!-- Adress Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('adress', 'Adress:') !!}
-    {!! Form::textarea('adress', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('owners_adress', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Name Field -->
@@ -32,3 +32,5 @@
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
     <a href="{{ route('owners.index') }}" class="btn btn-default">Cancel</a>
 </div>
+
+@include('layouts.footer')

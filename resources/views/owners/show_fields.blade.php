@@ -1,7 +1,7 @@
 <!-- Adress Field -->
 <div class="form-group">
     {!! Form::label('adress', 'Adress:') !!}
-    <p>{{ $owners->adress }}</p>
+    <p>{{ $owners->owners_adress }}</p>
 </div>
 
 <!-- Name Field -->

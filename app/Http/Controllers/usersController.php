@@ -9,6 +9,7 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use Illuminate\Support\Facades\Auth;
 
 
 class usersController extends AppBaseController
@@ -91,8 +92,9 @@ class usersController extends AppBaseController
      *
      * @return Response
      */
-    public function edit($id)
-    {
+    public function edit()
+    {   
+        $id = auth()->user()->id; 
         $users = $this->usersRepository->find($id);
 
         if (empty($users)) {

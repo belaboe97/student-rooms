@@ -1,12 +1,5 @@
 <style>
-    .modal-header-bg-img{
-        background-image: url("../static/img/students.jpg"); /* The image used */
-        background-color: #cccccc; /* Used if the image is unavailable */
-        height: 150px; /* You must set a specified height */
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
-}
+
     .modal-header-bg-headings{
 
         position: absolute;
@@ -32,15 +25,12 @@
     }
 </style>
 
-
-
-<div class="modal fade "  id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
-      <div class="modal-content"  >
-        <div class="modal-header modal-header-bg-img ">
+<div class="modal fade"  id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+      <div class="modal-content" >
+        <div class="modal-header modal-header-bg-img " >
           <h5 class="modal-title modal-header-bg-headings" id="exampleModalScrollableTitle">
           </h5>
-          
           <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
             <span aria-hidden="true">&times;</span>
           </button>
@@ -48,9 +38,25 @@
         <div class="modal-body container-fluid justify-content-center">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="#" id="apartment-image" alt="apartment-image" style="border-radius:0.3rem">
+                    <h3>Room Informations</h3>
+                    <div style="border: 1px solid rgb(0,0,0,0.13); padding:2px">
+                    <h6>Adress: <span id="adress"></span></h6>
+                    <h6>Price: <span id="price"></span> € </h6>
+                    <h6>Roomtype: <span id="roomtype" ></span></h6>
+                   <h6>Description:</h6>
+    
+                    <span id="description">
+                    </div>
+                    <hr>
+                    <h3>Owners Information</h3>
+                    <div style="border: 1px solid rgb(0,0,0,0.13); padding:2px">
+                    <h6>Name: <span id="name"></span></h6>
+                    <h6>Phone: <span id="phone"></span></h6>
+                    <h6>Email: <span id="email"></span></h6>
+                    <h6>Owners Adress: <span id="owners_adress"></span></h6>
+                    </div>
 
-                </div>
+                    </div>
                 <div class="col-sm-6">
                     <div id="map"></div>
                 </div>

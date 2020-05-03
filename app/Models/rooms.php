@@ -7,15 +7,17 @@ use Illuminate\Database\Eloquent\Model as Model;
 /**
  * Class rooms
  * @package App\Models
- * @version May 2, 2020, 11:50 am UTC
+ * @version May 2, 2020, 7:50 pm UTC
  *
- * @property \App\Models\Owner ownerid
  * @property \Illuminate\Database\Eloquent\Collection roomratings
  * @property \Illuminate\Database\Eloquent\Collection bookings
  * @property string adress
  * @property integer price
  * @property integer ownerid
  * @property string image
+ * @property string description
+ * @property string roomtype
+ * @property string title
  */
 class rooms extends Model
 {
@@ -32,7 +34,10 @@ class rooms extends Model
         'adress',
         'price',
         'ownerid',
-        'image'
+        'image',
+        'description',
+        'roomtype',
+        'title'
     ];
 
     /**
@@ -45,7 +50,10 @@ class rooms extends Model
         'adress' => 'string',
         'price' => 'integer',
         'ownerid' => 'integer',
-        'image' => 'string'
+        'image' => 'string',
+        'description' => 'string',
+        'roomtype' => 'string',
+        'title' => 'string'
     ];
 
     /**
@@ -57,14 +65,6 @@ class rooms extends Model
         'adress' => 'required',
         'price' => 'required'
     ];
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     **/
-    public function ownerid()
-    {
-        return $this->belongsTo(\App\Models\Owner::class, 'ownerid');
-    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

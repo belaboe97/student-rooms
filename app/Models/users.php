@@ -7,10 +7,9 @@ use Illuminate\Database\Eloquent\Model as Model;
 /**
  * Class users
  * @package App\Models
- * @version May 1, 2020, 10:44 pm UTC
+ * @version May 3, 2020, 3:52 pm UTC
  *
  * @property \App\Models\Role role
- * @property \App\Models\Owner owner
  * @property \Illuminate\Database\Eloquent\Collection bookings
  * @property \Illuminate\Database\Eloquent\Collection role1s
  * @property \Illuminate\Database\Eloquent\Collection paymentdetails
@@ -79,14 +78,6 @@ class users extends Model
     public function role()
     {
         return $this->belongsTo(\App\Models\Role::class, 'role_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     **/
-    public function owner()
-    {
-        return $this->hasOne(\App\Models\Owner::class);
     }
 
     /**

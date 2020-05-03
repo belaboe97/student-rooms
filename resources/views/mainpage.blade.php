@@ -15,21 +15,24 @@
         @foreach($rooms as $data)
        
             <div class="col-3">
-                <button style="border:none;background-color:white"  onclick="showModal('{{$data->adress}}','{{$data->id}}','{{$data->price}}','{{$data->image}}')" data-toggle="modal" data-target="#exampleModalScrollable">
+                <button style="border:none;background-color:white"  onclick="showModal('{{$data->adress}}','{{$data->id}}','{{$data->price}}','{{$data->owners_adress}}','{{$data->phone}}','{{$data->email}}','{{$data->name}}','{{$data->image}}','{{$data->roomtype}}','{{$data->description}}','{{$data->title}}')" data-toggle="modal" data-target="#exampleModalScrollable">
                     <figure class="imghvr-slide-right" >
-                        <div class="top-right">Top right</div>
+                        <div class="top-right">{{$data->owners_adress}}</div>
                         <div class="centered">{{$data->name}}</div>
                         <img class="img-responsive blog-content" src="images/{{$data->image}}" >
-                        <figcaption >
+                        <figcaption>
                                 <div class="row">
                                         <div class="col-sm-5 ">
-                                            <span>🏙️ Citycenter </span>
+                                            <span>Adress:</span>
                                         </div>
                                         <div class="col-sm-7">
-                                         
-                                            <div class="bar-container">
-                                               
-                                            </div>
+                                            <span>{{$data->adress}}</span>                                           
+                                        </div>
+                                        <div class="col-sm-5 ">
+                                            <span>Price:</span>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <span>{{$data->price}}</span>                                           
                                         </div>
                                 </div>
                         </figcaption>
@@ -41,4 +44,5 @@
 </div>
 
 </div>
+@include('modal-living')
 @include('layouts.footer')

@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@include('layouts.navbar')
+@include('layouts.breadstyle')
 
-@section('content')
+<div class="container">
     <section class="content-header">
         <h1 class="pull-left">Users</h1>
         <h1 class="pull-right">
@@ -22,5 +23,6 @@
         
         </div>
     </div>
-@endsection
+</div> 
+@include('layouts.footer')
 

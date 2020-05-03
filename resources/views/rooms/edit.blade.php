@@ -15,7 +15,7 @@
                <div class="row">
                    {!! Form::model($rooms, ['route' => ['rooms.update', $rooms->id], 'method' => 'patch']) !!}
 
-                        @include('rooms.fields')
+                        @include('rooms.fields_update')
 
                    {!! Form::close() !!}
                </div>
@@ -24,3 +24,4 @@
    </div>
 </div>
 @include('layouts.footer')
+

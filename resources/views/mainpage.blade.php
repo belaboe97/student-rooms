@@ -14,26 +14,42 @@
     <div class="row">
         @foreach($rooms as $data)
        
-            <div class="col-3">
+            <div class="col-3 mt-4">
                 <button style="border:none;background-color:white"  onclick="showModal('{{$data->adress}}','{{$data->id}}','{{$data->price}}','{{$data->owners_adress}}','{{$data->phone}}','{{$data->email}}','{{$data->name}}','{{$data->image}}','{{$data->roomtype}}','{{$data->description}}','{{$data->title}}')" data-toggle="modal" data-target="#exampleModalScrollable">
                     <figure class="imghvr-slide-right" >
-                        <div class="top-right">{{$data->owners_adress}}</div>
-                        <div class="centered">{{$data->name}}</div>
+                        <div class="top-right">{{$data->adress}}</div>
+                        <div class="centered">{{$data->title}}</div>
                         <img class="img-responsive blog-content" src="images/{{$data->image}}" >
                         <figcaption>
                                 <div class="row">
-                                        <div class="col-sm-5 ">
-                                            <span>Adress:</span>
+                                        <div class="col-sm-3 ">
+                                            <h6><span>Adress:</span></h6>
                                         </div>
-                                        <div class="col-sm-7">
-                                            <span>{{$data->adress}}</span>                                           
+                                        <div class="col-sm-9">
+                                          <h6>  <span>{{$data->adress}}</span></h6>                                           
                                         </div>
-                                        <div class="col-sm-5 ">
-                                            <span>Price:</span>
+
+                                        <div class="col-sm-3 ">
+                                           <h6> <span>Price:</span></h6>
                                         </div>
-                                        <div class="col-sm-7">
-                                            <span>{{$data->price}}</span>                                           
+                                        <div class="col-sm-9">
+                                           <h6> <span>{{$data->price}} €</span></h6>                                          
                                         </div>
+
+                                        <div class="col-sm-3 ">
+                                            <h6> <span>Type:</span></h6>
+                                         </div>
+                                         <div class="col-sm-9">
+                                            <h6> <span>{{$data->roomtype}} </span></h6>                                          
+                                         </div>
+                                         
+                                         <div class="col-sm-3 ">
+                                            <h6> <span>Phone:</span></h6>
+                                         </div>
+                                         <div class="col-sm-9">
+                                            <h6> <span>{{$data->phone}} </span></h6>                                          
+                                         </div>
+                                        
                                 </div>
                         </figcaption>
                     </figure>

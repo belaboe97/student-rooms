@@ -30,7 +30,6 @@
                 <td>
                     {!! Form::open(['route' => ['rooms.destroy', $rooms->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('rooms.show', [$rooms->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                         <a href="{{ route('rooms.edit', [$rooms->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                         <a href="{!! route('roomratings.rateroom', [$rooms->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-ok"></i></a>
                         {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}

@@ -68,7 +68,7 @@ class roomratingController extends AppBaseController
 
         Flash::success('Roomrating saved successfully.');
 
-        return redirect(route('roomratings.index'));
+        return redirect(route('rooms.index'));
     }
 
     /**

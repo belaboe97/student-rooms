@@ -22,7 +22,7 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="/owners">Owners</a>
-                      <a class="dropdown-item" href="">Become Owner</a>
+                      <a class="dropdown-item" href="/owners/create">Become Owner</a>
                     </div>
                   </div>
                   <div class="dropdown">
@@ -31,7 +31,6 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="/roomratings">See all Ratings</a>
-                      <a class="dropdown-item" href="/owners/create">Become Owner</a>
                     </div>
                   </div>
                   <div class="dropdown">

@@ -76,9 +76,13 @@ class roomsController extends AppBaseController
             $imageRoom->move($path, $filename);
             $room->image = $filename;
             $room->save();
+            Flash::success('😊 Room uploaded succesfully');
+
+        }
+        else{
+            Flash::error('😞 Room could not be uploaded');
         }
          
-
         return redirect(route('rooms.index'));
     }
 

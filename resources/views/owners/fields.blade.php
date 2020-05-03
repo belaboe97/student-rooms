@@ -6,7 +6,7 @@
 <!-- Adress Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('adress', 'Adress:') !!}
-    {!! Form::textarea('owners_adress', null, ['class' => 'form-control']) !!}
+    {!! Form::text('owners_adress', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Name Field -->
@@ -18,7 +18,7 @@
 <!-- Phone Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('phone', 'Phone:') !!}
-    {!! Form::textarea('phone', null, ['class' => 'form-control']) !!}
+    {!! Form::text('phone', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Email Field -->
@@ -33,4 +33,4 @@
     <a href="{{ route('owners.index') }}" class="btn btn-default">Cancel</a>
 </div>
 
-@include('layouts.footer')
+

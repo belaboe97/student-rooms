@@ -115,7 +115,7 @@ class usersController extends AppBaseController
      * @return Response
      */
     public function update($id, UpdateusersRequest $request)
-    {
+    {   
         $users = $this->usersRepository->find($id);
 
         if (empty($users)) {
